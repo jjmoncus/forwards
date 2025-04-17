@@ -2,15 +2,9 @@ library(tidyverse)
 library(here)
 library(glue)
 
-
-
 folder <- here("Downloads")
 file <- list.files(folder) %>% str_subset("data") %>% str_subset("rds")
 data <- readRDS(glue("{folder}/{file}"))
-
-#batt_bars(data, "effective", value_to_find = "Very effective")
-# find_vars(data, "effective")
-
 
 
 library(ellmer)
